@@ -86,9 +86,11 @@ namespace u19182504_HW04.Controllers
                 oldman._citizenType = citizenType;
                 oldman._firstName = firstname;
                 oldman._lastName = lastname;
+                oldman._city = city;
                 oldman._nationalID = Convert.ToInt32(idNum);
+                oldman.travelID();
                 ListRepository.Elders.Add(oldman);
-                return View("Elder");
+                return View("Elder", oldman);
             }
                 ViewBag.Message = "Collect citizen information";
 
@@ -108,7 +110,7 @@ namespace u19182504_HW04.Controllers
                 return View();
             }
 
-            public ActionResult Elder()
+            public ActionResult Elder(Elder elder)
             {
                 ViewBag.Message = "Elder information";
 
