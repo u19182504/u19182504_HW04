@@ -1,0 +1,107 @@
+﻿@{
+    ViewBag.Title = "Data Input Page";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<style>
+    /*styling for dropdownlist*/
+    .dropbtn {
+        background-color: #04AA6D;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        border-radius: 7px;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+            .dropdown-content a:hover {
+                background-color: #ddd;
+            }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+        background-color: #3e8e41;
+    }
+
+    /*styling for radiobuttons*/
+
+
+</style>
+
+<form method="post">
+    <label>Enter first name:</label>
+    <br />
+    <input type="text" name="fname" />
+    <br />
+    <br />
+    <label>Enter last name: </label>
+    <br />
+    <input type="text" name="lname" />
+    <br />
+    <br />
+    <label>Enter  national ID number: </label>
+    <br />
+    <input type="number" name="IDplaceholder" />
+    <br />
+    <br />
+
+    <label>Enter City:</label>
+
+    <br />
+    <input type="text" name="CityPlaceHolder" />
+    <br />
+
+    <label>Enter distance from school/workplace</label>
+    <br />
+    <input type="number" name="schoolDistance" />
+    <br />
+    <br />
+
+    @* dropdown list for citizen type *@
+
+
+    <div class="dropdown">
+        <select class="dropbtn" name="typeList">
+            <option value="none" selected disabled hidden>Select Citizen Type</option>
+            <option value="Scholar(16+)">Scholar(16+)</option>
+            <option value="Workforce">Workforce & 18+</option>
+            <option value="Elder">Elderly</option>
+        </select>
+
+    </div>
+    <br />
+    <br />
+    <input type="submit" value="Save data" />
+</form>
+
+
+
+
+<br />
+
+
